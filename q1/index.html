@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>How the Web Works</title>
+<style>
+body {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  margin: 0;
+  background-color: #f7f8fa;
+  color: #222;
+}
+.wrapper { max-width: 900px; margin: auto; padding: 30px; }
+h1 {
+  color: #ffffff;
+  background-color: #1b2a4a;
+  text-align: center;
+  padding: 22px;
+  margin: 0 0 20px 0;
+  border-radius: 0 0 10px 10px;
+}
+h2 {
+  color: #1b2a4a;
+  border-bottom: 3px solid #c0392b;
+  padding-bottom: 6px;
+}
+.box {
+  border: 2px solid #c0392b;
+  background-color: #fdf1ef;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: bold;
+}
+table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+th, td { border: 1px solid #ccc; padding: 10px; }
+th { background-color: #1b2a4a; color: white; }
+tr:nth-child(even) { background-color: #f0f0f2; }
+</style>
+</head>
+<body>
+<h1>How the Web Works</h1>
+<div class="wrapper">
+
+<h2>1. The Internet in Brief</h2>
+<p>The Internet is the physical and logical network of cables, routers, and satellites that lets
+computers around the planet exchange data. The Web is just one of the services built on top of it.</p>
+<div class="box">Home Router &rarr; ISP &rarr; Internet Exchange &rarr; Destination Server</div>
+<p>Everyday services riding on the Internet include:</p>
+<ul>
+  <li>Web Browsing</li>
+  <li>Video Calls</li>
+  <li>Cloud Storage</li>
+  <li>Online Gaming</li>
+  <li>Email</li>
+</ul>
+
+<h2>2. Networking Building Blocks</h2>
+<p>A network is simply devices wired or wirelessly linked so they can talk to one another.</p>
+<h3>Key Terms</h3>
+<ul>
+  <li><b>Device / Node:</b> Anything that can send or receive data (laptop, phone, printer).</li>
+  <li><b>IP Address:</b> The numeric label assigned to a device on a network.</li>
+  <li><b>Router:</b> Directs traffic between different networks.</li>
+  <li><b>Access Point:</b> Lets wireless devices join a network.</li>
+  <li><b>Protocol:</b> The agreed format for exchanging data, e.g. HTTP or FTP.</li>
+</ul>
+<div class="box">Phone &rarr; Access Point &rarr; Router &rarr; Internet &rarr; Cloud Service</div>
+
+<h2>3. Breaking Down a URL</h2>
+<p><b>URL</b> stands for Uniform Resource Locator &mdash; the address typed to reach a resource on the Web.</p>
+<div class="box">https://shop.cloudnest.io/deals/summer-sale</div>
+<ul>
+  <li><b>https:</b> Protocol used for the connection</li>
+  <li><b>shop:</b> Subdomain</li>
+  <li><b>cloudnest.io:</b> Domain name</li>
+  <li><b>/deals/summer-sale:</b> Path to the specific page</li>
+</ul>
+
+<h2>4. What's in a Domain Name</h2>
+<p>A domain name replaces a hard-to-remember IP address with a readable name.</p>
+<div class="box">www.greenvalley.org</div>
+<ul>
+  <li><b>www</b> &mdash; Subdomain</li>
+  <li><b>greenvalley</b> &mdash; Registered name</li>
+  <li><b>.org</b> &mdash; Top-level domain</li>
+</ul>
+<h3>Frequently Seen Extensions</h3>
+<table>
+<tr><th>Extension</th><th>Commonly Used For</th></tr>
+<tr><td>.com</td><td>General / commercial sites</td></tr>
+<tr><td>.org</td><td>Non-profit organizations</td></tr>
+<tr><td>.net</td><td>Network / infrastructure services</td></tr>
+<tr><td>.io</td><td>Tech startups and products</td></tr>
+<tr><td>.co.in</td><td>Indian commercial entities</td></tr>
+</table>
+
+<h2>5. Browsers and Servers</h2>
+<h3>Web Browser</h3>
+<p>Software that requests a page and displays it to the user &mdash; e.g. Chrome, Firefox, Brave, Safari.</p>
+<h3>Web Server</h3>
+<p>The machine and software that store site files and reply to browser requests &mdash; e.g. Apache, Nginx, LiteSpeed.</p>
+<div class="box">Browser --request--&gt; Server<br>Server --response--&gt; Browser</div>
+
+<h2>6. Journey of a Page Load</h2>
+<ol>
+  <li>Visitor types an address or taps a link.</li>
+  <li>Browser looks up the domain's IP address using DNS.</li>
+  <li>Browser opens a connection to that server.</li>
+  <li>Browser sends an HTTP(S) request for the page.</li>
+  <li>Server finds the requested files and builds a response.</li>
+  <li>Server returns the page data to the browser.</li>
+  <li>Browser paints the HTML, CSS, and JavaScript on the screen.</li>
+</ol>
+<div class="box">Visitor &rarr; Browser &rarr; DNS &rarr; Server &rarr; Response &rarr; Page Displayed</div>
+
+<h2>7. Client-Side vs Server-Side Scripting</h2>
+<table>
+<tr><th>Aspect</th><th>Client-Side</th><th>Server-Side</th></tr>
+<tr><td>Runs on</td><td>The visitor's device</td><td>The web server</td></tr>
+<tr><td>Common language</td><td>JavaScript</td><td>PHP, Python, Java</td></tr>
+<tr><td>Good for</td><td>Instant UI feedback</td><td>Business rules & storage</td></tr>
+<tr><td>Reaches a database?</td><td>Not directly</td><td>Yes, usually</td></tr>
+<tr><td>Typical example</td><td>Live input validation</td><td>Processing a payment</td></tr>
+</table>
+<div class="box">
+Client-Side: Visitor &rarr; Browser &rarr; JS Engine &rarr; Immediate Update<br><br>
+Server-Side: Visitor &rarr; Browser &rarr; Server &rarr; Database &rarr; Final Response
+</div>
+
+<h2>Summary</h2>
+<p>Networks, browsers, servers, domain names and scripting each play a distinct role, and together
+they turn a typed address into a rendered page in a fraction of a second.</p>
+</div>
+</body>
+</html>

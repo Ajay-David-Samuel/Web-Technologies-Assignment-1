@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library Membership Registration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Maple Street Public Library</h1>
+  <p>New Membership Registration</p>
+</header>
+<main class="container">
+  <div class="form-header">
+    <h2>Membership Application Form</h2>
+    <p>Fill out the details below to get your library card.</p>
+  </div>
+  <form>
+    <section>
+      <h3>Personal Details</h3>
+      <div class="row">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="field">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter phone number" required>
+        </div>
+      </div>
+      <div class="field">
+        <label>Membership Type</label>
+        <div class="options">
+          <label><input type="radio" name="membership" value="student"> Student</label>
+          <label><input type="radio" name="membership" value="adult"> Adult</label>
+          <label><input type="radio" name="membership" value="senior"> Senior Citizen</label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Reading Preferences</h3>
+      <div class="row">
+        <div class="field">
+          <label for="genre">Favourite Genre</label>
+          <select id="genre" required>
+            <option value="">Select Genre</option>
+            <option>Fiction</option>
+            <option>Science &amp; Technology</option>
+            <option>History</option>
+            <option>Biography</option>
+            <option>Children's Books</option>
+            <option>Comics &amp; Graphic Novels</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cardType">Card Type</label>
+          <select id="cardType" required>
+            <option value="">Select Card Type</option>
+            <option>Standard (5 books/month)</option>
+            <option>Premium (15 books/month)</option>
+            <option>Digital Only (e-books)</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="booksPerMonth">Expected Books per Month</label>
+          <input type="number" id="booksPerMonth" min="1" max="30" placeholder="e.g. 4">
+        </div>
+        <div class="field">
+          <label for="joinDate">Preferred Start Date</label>
+          <input type="date" id="joinDate">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Address</h3>
+      <div class="field">
+        <label for="address">Home Address</label>
+        <textarea id="address" rows="3" placeholder="Enter your complete address"></textarea>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="city">City</label>
+          <input type="text" id="city" placeholder="Enter city">
+        </div>
+        <div class="field">
+          <label for="pincode">Pincode</label>
+          <input type="number" id="pincode" placeholder="Enter pincode">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Additional Interests</h3>
+      <div class="field">
+        <label>Library Programs You'd Like Updates On</label>
+        <div class="options">
+          <label><input type="checkbox" name="program"> Book Clubs</label>
+          <label><input type="checkbox" name="program"> Author Talks</label>
+          <label><input type="checkbox" name="program"> Kids' Storytime</label>
+          <label><input type="checkbox" name="program"> Writing Workshops</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="notes">Any Special Requests</label>
+        <textarea id="notes" rows="3" placeholder="Let us know if you need anything specific"></textarea>
+      </div>
+    </section>
+
+    <div class="agreement">
+      <label>
+        <input type="checkbox" required>
+        I agree to the library's borrowing rules and return policy.
+      </label>
+    </div>
+    <div class="buttons">
+      <button type="submit">Submit Application</button>
+      <button type="reset" class="reset">Clear Form</button>
+    </div>
+  </form>
+</main>
+<footer>
+  <p>&copy; 2026 Maple Street Public Library | Membership Portal</p>
+</footer>
+</body>
+</html>

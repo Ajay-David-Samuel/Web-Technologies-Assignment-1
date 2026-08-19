@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Assessment Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">PeakForm</div>
+  <p>Client Fitness Assessment System</p>
+</header>
+<main class="container">
+  <div class="title">
+    <h1>Fitness Assessment Calculator</h1>
+    <p>Enter scores for five fitness areas to determine the client's overall fitness level.</p>
+  </div>
+
+  <div class="card">
+    <h2>Client Information</h2>
+    <div class="emp-info">
+      <div>
+        <label for="clientName">Client Name</label>
+        <input type="text" id="clientName" placeholder="Enter client name">
+      </div>
+      <div>
+        <label for="clientId">Client ID</label>
+        <input type="text" id="clientId" placeholder="Enter client ID">
+      </div>
+    </div>
+
+    <h2>Fitness Test Scores (out of 100)</h2>
+    <div class="subjects">
+      <div class="subject">
+        <label for="score1">Cardiovascular Endurance</label>
+        <input type="number" id="score1" min="0" max="100" placeholder="0 - 100">
+      </div>
+      <div class="subject">
+        <label for="score2">Muscular Strength</label>
+        <input type="number" id="score2" min="0" max="100" placeholder="0 - 100">
+      </div>
+      <div class="subject">
+        <label for="score3">Flexibility</label>
+        <input type="number" id="score3" min="0" max="100" placeholder="0 - 100">
+      </div>
+      <div class="subject">
+        <label for="score4">Balance & Coordination</label>
+        <input type="number" id="score4" min="0" max="100" placeholder="0 - 100">
+      </div>
+      <div class="subject">
+        <label for="score5">Body Composition</label>
+        <input type="number" id="score5" min="0" max="100" placeholder="0 - 100">
+      </div>
+    </div>
+
+    <div id="error"></div>
+    <div class="buttons">
+      <button onclick="calculateFitness()">Calculate Result</button>
+      <button class="reset" onclick="resetForm()">Reset</button>
+    </div>
+  </div>
+
+  <div class="result-card" id="result">
+    <h2>Assessment Summary</h2>
+    <div class="emp-result">
+      <p>Client: <strong id="resultName">-</strong></p>
+      <p>ID: <strong id="resultId">-</strong></p>
+    </div>
+    <div class="result-container">
+      <div class="result-box">
+        <span>Total Score</span>
+        <strong id="total">0</strong>
+        <small>/ 500</small>
+      </div>
+      <div class="result-box">
+        <span>Average</span>
+        <strong id="average">0</strong>
+        <small>%</small>
+      </div>
+      <div class="result-box">
+        <span>Fitness Level</span>
+        <strong id="tier">-</strong>
+      </div>
+      <div class="result-box status-box">
+        <span>Program Ready</span>
+        <strong id="status">-</strong>
+      </div>
+    </div>
+    <div class="bonus-amount">
+      Recommended Program: <strong id="programName">-</strong>
+    </div>
+  </div>
+</main>
+<footer>
+  <p>Fitness Assessment Calculator | JavaScript Application</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
